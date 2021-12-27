@@ -126,7 +126,7 @@ function calcBandwidth(trace, cdi, vals) {
         var ssd = Lib.stdev(vals, len - 1, cdi.mean);
         return Math.max(
             silvermanRule(len, ssd, cdi.q3 - cdi.q1),
-            span / 100
+            span / 1e4
         );
     }
 }
